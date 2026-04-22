@@ -43,8 +43,11 @@ qt-app
   ```bash
   # after activating venv and installing requirements
   pyside6-uic src/qt_app/window.ui -o src/qt_app/ui_window.py
-  # or use the helper script
+  # or regenerate every .ui file under src/
   ./scripts/gen_ui.sh
   ```
+
+  The helper emits each Designer file as a sibling `ui_<name>.py`.
+  Example: `src/qt_app/window.ui` -> `src/qt_app/ui_window.py`
 
 - This is a skeleton—feel free to request additional features (tray icon, preferences, docs, CI, packaging)!

@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'window.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.10.1
+## Created by: Qt User Interface Compiler version 6.11.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -16,9 +16,8 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QLabel, QMainWindow, QMenu,
-    QMenuBar, QPushButton, QSizePolicy, QStatusBar,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QMainWindow, QMenu, QMenuBar,
+    QSizePolicy, QStatusBar, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -33,37 +32,25 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.label = QLabel(self.centralwidget)
-        self.label.setObjectName(u"label")
-        self.label.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout.addWidget(self.label)
-
-        self.pushButton = QPushButton(self.centralwidget)
-        self.pushButton.setObjectName(u"pushButton")
-
-        self.verticalLayout.addWidget(self.pushButton)
-
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
         self.menubar.setGeometry(QRect(0, 0, 800, 22))
+        self.menuFile = QMenu(self.menubar)
+        self.menuFile.setObjectName(u"menuFile")
+        self.menuActions = QMenu(self.menubar)
+        self.menuActions.setObjectName(u"menuActions")
+        self.menuHelp = QMenu(self.menubar)
+        self.menuHelp.setObjectName(u"menuHelp")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
         MainWindow.setStatusBar(self.statusbar)
-        self.menuFile = QMenu(MainWindow)
-        self.menuFile.setObjectName(u"menuFile")
-        MainWindow.setCentralWidget(self.menuFile)
-        self.menuHelp = QMenu(MainWindow)
-        self.menuHelp.setObjectName(u"menuHelp")
-        MainWindow.setCentralWidget(self.menuHelp)
 
         MainWindow.addAction(self.actionExit)
         MainWindow.addAction(self.actionAbout)
-        MainWindow.addAction(self.menuFile.menuAction())
-        MainWindow.addAction(self.menuHelp.menuAction())
         self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuActions.menuAction())
         self.menubar.addAction(self.menuHelp.menuAction())
         self.menuFile.addAction(self.actionExit)
         self.menuHelp.addAction(self.actionAbout)
@@ -77,9 +64,8 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Qt App Skeleton", None))
         self.actionExit.setText(QCoreApplication.translate("MainWindow", u"E&xit", None))
         self.actionAbout.setText(QCoreApplication.translate("MainWindow", u"&About", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Hello, Qt!", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Click me", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"&File", None))
+        self.menuActions.setTitle(QCoreApplication.translate("MainWindow", u"&Actions", None))
         self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"&Help", None))
     # retranslateUi
 
