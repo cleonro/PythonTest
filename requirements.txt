@@ -4,6 +4,6 @@ pandas
 matplotlib 
 scikit-learn 
 seaborn 
-# pytorch 
+torch 
 
 
